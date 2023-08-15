@@ -1,0 +1,38 @@
+{% extends 'trainee/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title>Add Trainee</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'trainee/style.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row justify-content-center"> <!-- Center-align content -->
+            <div class="col-md-6"> <!-- Define a column width for responsiveness -->
+                 <div class="card">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Add Trainee</button>
+                        </div>
+                        {% if messages %}
+                        <div class="alert alert-success">
+                            <ul>
+                                {% for message in messages %}
+                                <li>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                     </form>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% endblock %}

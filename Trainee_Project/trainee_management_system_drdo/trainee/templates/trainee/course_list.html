@@ -1,0 +1,52 @@
+{% extends 'trainee/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title>Course List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'trainee/style.css' %}">
+</head>
+<body>
+    <div class="container center-container">
+    <h2 style="text-align:center;">Courses</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Filters or search inputs can go here -->
+        </div>
+        <div class="col-md-8">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>course id</th>
+                            <th>Course Name</th>
+                            <th>Description</th>
+                            <th>Training Center</th>
+                            <!-- Add more columns as needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for course in courses %}
+                        <tr>
+                            <td>{{ course.id }}</td>
+                            <td>{{ course.name }}</td>
+                            <td>{{ course.description }}</td>
+                            <td>{{ course.training_center.name }}</td>
+                            <!-- Add more columns as needed -->
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

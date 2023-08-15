@@ -1,0 +1,89 @@
+/* static/trainees/style.css */
+/* Style for form fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Style for submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f9fa; /* Light gray background color */
+    box-shadow: 0px 0px 10px rgba(23,45,21,78); /* Optional box shadow */
+}
+
+/* Center-align the container */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Optional: This ensures the container takes up at least the full viewport height */
+
+/* Center-align the content within the main element */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Adjust to account for header and footer height */
+}
+
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Basic styling for footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Style for form container */
+.form-container {
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for form fields */
+.form-group {
+    margin-bottom: 20px;
+}

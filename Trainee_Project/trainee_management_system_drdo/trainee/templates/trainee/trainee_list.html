@@ -1,0 +1,43 @@
+{% extends 'trainee/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title>Trainee List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'trainee/style.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Trainee List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Date of Birth</th>
+                    <th>Course</th>
+                    <!-- Add more columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for trainee in trainees %}
+                <tr>
+                    <td>{{ trainee.name }}</td>
+                    <td>{{ trainee.age }}</td>
+                    <td>{{ trainee.date_of_birth }}</td>
+                    <td>{{ trainee.course }}</td>
+                    <!-- Add more columns as needed -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
